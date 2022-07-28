@@ -20,21 +20,11 @@ import {
     const handleEdit = () => {
       navigate(`/myBlogs/${id}`);
     }
-    //const deleteRequest = async () => {
-      //const res = await axios
-        //.delete(`http://localhost:5002/api/blog/${id}`)
-        //.catch((err) => console.log(err));
-      //const data = await res.data;
-      //return data;
-    //};
-    //const handleDelete = () => {
-      //deleteRequest()
-        //.then(() => navigate("/blogs/add"))
-    //};
+    
 
     const handleDelete = async () => {
       try{
-        await axios.delete(`http://localhost:5002/api/blog/${id}`);
+        await axios.delete(`https://blogapp1306.herokuapp.com/api/blog/${id}`);
         window.location.replace("/blogs"); 
       }catch(err){};
       
